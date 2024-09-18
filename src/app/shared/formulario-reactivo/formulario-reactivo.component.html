@@ -1,0 +1,24 @@
+<form [formGroup]="pokemonsForm" (ngSubmit)="guardar()">
+
+  <label for="pokemon-id">ID:</label>
+  <input id="pokemon-id" type="text" formControlName="id" placeholder="Ingresa el ID del Pokémon">
+  <br>
+  <label for="pokemon-name">Name:</label>
+  <input id="pokemon-name" type="text" formControlName="name" placeholder="Ingresa el nombre del Pokémon">
+  <br>
+  <label for="pokemon-description">Description:</label>
+  <input id="pokemon-description" type="text" formControlName="description" placeholder="Ingresa la descripción del Pokémon">
+  <br>
+  <label for="pokemon-category">Category:</label>
+  <input id="pokemon-category" type="text" formControlName="category" placeholder="Ingresa la categoría del Pokémon">
+  <br>
+  <label>Type:</label>
+  <div formArrayName="types" class="checkbox-container">
+    <div *ngFor="let type of pokemonTypes; let i = index" class="checkbox-item">
+      <input type="checkbox" [formControlName]="i" placeholder="Ingresa la categoría del Pokémon"> {{ type }}
+    </div>
+  </div>
+  <br>
+
+  <button type="submit" [disabled]="!pokemonsForm.valid">Guardar</button>
+</form>

@@ -1,0 +1,11 @@
+.checkbox-container {
+    display: flex;           /* Utiliza flexbox para organizar en línea */
+    flex-wrap: wrap;         /* Permite que los checkboxes se vayan a la siguiente línea si no caben */
+    gap: 10px;               /* Espacio entre cada checkbox */
+  }
+  
+  .checkbox-item {
+    display: flex;
+    align-items: center;     /* Alinea los checkboxes verticalmente con el texto */
+  }
+  

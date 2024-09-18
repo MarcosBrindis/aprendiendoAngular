@@ -1,0 +1,46 @@
+.header {
+    background-image: url('https://w.wallhaven.cc/full/43/wallhaven-431gyn.jpg');  /* Fondo temático */
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra más pronunciada */
+    border-bottom: 5px solid #ffcc01;  /* Color inspirado en Pokémon */
+  
+    .header-content {
+      background-color: rgba(0, 0, 0, 0.6);  /* Fondo oscuro con mayor opacidad */
+      padding: 20px 30px;
+      border-radius: 12px;
+      animation: fadeIn 2s ease-in-out;  /* Animación de aparición suave */
+    }
+  
+    .page-title {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 2px;  /* Espaciado entre letras */
+      text-transform: uppercase;  /* Texto en mayúsculas */
+      color: #ffcc01;  /* Color inspirado en Pikachu */
+    }
+  
+    .subtitle {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: #ffffff;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);  /* Sombra para mejorar la legibilidad */
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  

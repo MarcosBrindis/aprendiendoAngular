@@ -1,0 +1,50 @@
+<div class="grid-container"></div>
+  <h1 class="mat-h1"></h1>
+ 
+  <mat-grid-list cols="2" rowHeight="350px">
+    <!-- Primera tarjeta -->
+    <mat-grid-tile colspan="2" rowspan="1">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            <p>Lista de pokemon</p>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <table>
+          @for(elementPokemon of pokemonArray; track elementPokemon){
+              <tr>
+                <td>
+                  {{elementPokemon.id}}
+                </td>
+                <td>
+                  <a (click)="showName(elementPokemon)"> {{elementPokemon.name}}</a>
+                </td>
+                <td>
+                  <button (click)="showName(elementPokemon)">ver</button>
+                  <button (click)="deletepokemon(elementPokemon.id)">delete</button>
+                </td>
+              </tr>          
+          }
+        </table> 
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="2" rowspan="1">
+    <mat-card class="dashboard-card" fixedInViewport>
+      <mat-card-header>
+        <mat-card-title>
+          <p>Agregar Pokémon</p>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="dashboard-card-content">
+        <app-formulario-reactivo></app-formulario-reactivo>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

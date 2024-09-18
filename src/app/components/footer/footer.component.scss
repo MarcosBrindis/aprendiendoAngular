@@ -1,0 +1,46 @@
+.footer {
+    background-color: #1f1f1f;  /* Color oscuro */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 5px solid #ffcc01;  /* Borde superior en amarillo (temático) */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);  /* Sombra para dar profundidad */
+  
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;  /* Centrar contenido */
+    }
+  
+    .footer-text {
+      margin: 0;
+      font-size: 1rem;
+      color: #ccc;  /* Color gris claro */
+      
+      a {
+        color: #ffcc01;  /* Color del enlace en amarillo temático */
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: white;  /* Cambio de color al pasar el mouse */
+        }
+      }
+    }
+  
+    .footer-links {
+      margin-top: 10px;
+      
+      a {
+        color: #ffcc01;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+        
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+  
